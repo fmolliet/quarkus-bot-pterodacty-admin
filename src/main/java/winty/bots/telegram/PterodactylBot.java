@@ -28,7 +28,7 @@ public class PterodactylBot extends TelegramLongPollingCommandBot {
     
     @ConfigProperty(name = "telegram.bot.token") String token;
     
-    private static final Logger LOGGER = Logger.getLogger(PterodactylBot.class);
+    private static final Logger logger = Logger.getLogger(PterodactylBot.class);
     
     private ArrayList<IBotCommand> commands = new ArrayList<IBotCommand>();
     
@@ -53,10 +53,11 @@ public class PterodactylBot extends TelegramLongPollingCommandBot {
 
     public void setup() {
         this.loadCommands();
-        this.registerCommand(commands);
+        this.registerCommand();
+        logger.info("Comandos carregados com sucesso!");
     }
     
-    private void registerCommand(ArrayList<IBotCommand> commands) {
+    private void registerCommand() {
         commands.forEach( (command) -> {
             super.register(command);
         });

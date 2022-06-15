@@ -17,10 +17,10 @@ public class AppLifecycleBean {
     
     @Inject PterodactylBot bot;
     
-    private static final Logger LOGGER = Logger.getLogger("ListenerBean");
+    private static final Logger logger = Logger.getLogger(AppLifecycleBean.class);
     
     void onStart(@Observes StartupEvent ev) {
-        LOGGER.info("Bot is starting...");
+        logger.info("Bot is starting...");
         this.bot.setup();
         this.bot.start();
         
@@ -33,6 +33,6 @@ public class AppLifecycleBean {
     }
 
     void onStop(@Observes ShutdownEvent ev) {
-        LOGGER.info("Bot is stopping...");
+        logger.info("Bot is stopping...");
     }
 }
