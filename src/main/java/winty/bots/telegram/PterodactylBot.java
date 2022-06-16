@@ -1,9 +1,7 @@
 package winty.bots.telegram;
 
 import org.telegram.telegrambots.bots.DefaultBotOptions;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.extensions.bots.commandbot.TelegramLongPollingCommandBot;
-import org.telegram.telegrambots.extensions.bots.commandbot.commands.CommandRegistry;
 import org.telegram.telegrambots.extensions.bots.commandbot.commands.IBotCommand;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
@@ -13,9 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.ArrayList;
-import java.util.Map;
 
-import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Singleton;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;

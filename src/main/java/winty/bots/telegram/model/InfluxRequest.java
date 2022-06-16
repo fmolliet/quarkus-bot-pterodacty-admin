@@ -1,8 +1,6 @@
 package winty.bots.telegram.model;
 
 import java.time.Instant;
-import java.util.Date;
-
 import lombok.Data;
 
 @Data
